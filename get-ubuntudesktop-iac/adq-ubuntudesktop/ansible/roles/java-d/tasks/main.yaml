@@ -1,0 +1,4 @@
+- name: Remove Java {{ java_version | default('11') }}
+  apt:
+    name: openjdk-{{ java_version | default('11') }}-jdk
+    state: absent

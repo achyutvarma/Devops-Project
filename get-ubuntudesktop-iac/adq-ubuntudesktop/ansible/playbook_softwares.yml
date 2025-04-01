@@ -1,0 +1,23 @@
+---
+- name: Apply configurations based on group_vars
+  hosts: all
+  
+  roles:
+    - name: Apply Java Installation
+      role: java
+      tags: java
+
+    - name: Apply python Installation
+      role: python
+      tags: python
+  
+  #tasks
+  #  - name: Include roles if tags match
+  ##    include_role:
+   #     name: "{{ item }}"
+   #   loop:
+   #     - java
+    #    - python
+     #   - tomcat
+      #  - ubuntudesktop
+       # - notepad++
